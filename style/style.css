@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+
+}
+
+
+/* --------ejercicio 2 barra de navegación */
+#navBar{
+    
+    width: 100%;
+    min-height: 6em;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: grey;
+}
+#enlaces{
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+
+}
+.enlace{
+    font-size: 1.7em;
+    text-decoration: none;
+    color: aquamarine;
+    transition: color 0.3s, text-decoration 0.3s;
+    
+}
+
+.enlace:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+#logo{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#logo img{
+    width: 20%;
+    height: 20%;
+    min-width: 5em;
+    border-radius: 50%;
+    border: solid aquamarine 0.3vw;
+    box-shadow: inset 0 0 5px 2px black;
+}
