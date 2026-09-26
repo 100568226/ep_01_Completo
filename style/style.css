@@ -11,12 +11,24 @@
     
     width: 100%;
     min-height: 6em;
-    flex-wrap: wrap;
+    flex-wrap:nowrap;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background-color: grey;
+    justify-content: space-between;
+    background-color: rgb(9,24,51);
+    box-shadow: 0 10px 3px 3px rgb(0,255,159),
+    ;
 }
+@media screen and (max-width: 420px) {
+    #navBar{
+        justify-content: space-between;
+        align-items: center;
+
+        flex-wrap: wrap;
+    }
+
+}
+
 #enlaces{
     padding-left: 0;
     display: flex;
@@ -29,14 +41,14 @@
 .enlace{
     font-size: 1.7em;
     text-decoration: none;
-    color: aquamarine;
+    color: rgb(10,189,198);
     transition: color 0.3s, text-decoration 0.3s;
     
 }
 
 .enlace:hover{
     text-decoration: underline;
-    color: blue;
+    color: rgb(223,192,233);
 }
 
 #logo{
@@ -51,6 +63,5 @@
     height: 20%;
     min-width: 5em;
     border-radius: 50%;
-    border: solid aquamarine 0.3vw;
-    box-shadow: inset 0 0 5px 2px black;
+    border: solid rgb(234,0,217) 0.3em;
 }
