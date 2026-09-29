@@ -7,28 +7,31 @@
 html,body{
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow:auto;
 }
 #container{
     width: 100%;
     height: 88%;
-    border: solid blue;
+    background-image: url(../media/callejuela.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
     
+
 }
 
 /* --------ejercicio 2 barra de navegación */
 #navBar{
-    
+    position: sticky;
     width: 100%;
     min-height: 12%;
     display: flex;
     justify-content: center;
-    background-color: rgb(9,24,51);
-    box-shadow:  0 0 5px rgb(0,255,159),
-    0 0 10px rgb(0,255,159),
-    0 0 20px rgb(0,255,159),
-    0 0 40px rgb(0,255,159),
-    0 0 80px rgb(0,255,159);
+    background-color: rgb(1,1,43);
+    box-shadow: 0 0 10px rgb(255,42,109),
+    0 0 10px rgb(255,42,109),
+    0 0 20px rgb(255,42,109),
+    0 0 40px rgb(255,42,109),
+    0 0 80px rgb(255,42,109);
     /* box-shadow: 0 10px 3px 3px rgb(0,255,159),
     ; */
 }
@@ -50,14 +53,7 @@ html,body{
         font-size: 0.8em;
         align-items: center;
         flex-direction: column;
-    } 
-    /* #enlaces{
-        font-size: 0.7em;
-    }
-    #logo{
-
-    } */
-    
+    }    
 
 }
 #enlaces{
@@ -73,19 +69,19 @@ html,body{
 .enlace{
     font-size: 1.7em;
     text-decoration: none;
-    color: rgb(10,189,198);
+    color: rgb(255,42,109);
     transition: color 0.3s, text-decoration 0.3s;
     
 }
 
 .enlace:hover{
     text-decoration: underline;
-    color: rgb(223,192,233);
-    text-shadow:  0 0 5px rgb(234,0,217),
-    0 0 10px rgb(234,0,217),
-    0 0 20px rgb(234,0,217),
-    0 0 40px rgb(234,0,217),
-    0 0 80px rgb(234,0,217);
+    color: rgb(250, 122, 162);
+    text-shadow:  0 0 5px rgb(255,42,109),
+    0 0 10px rgb(255,42,109),
+    0 0 20px rgb(255,42,109),
+    0 0 40px rgb(255,42,109),
+    0 0 80px rgb(255,42,109);
 }
 
 #logo{
@@ -100,7 +96,7 @@ html,body{
     min-width: 5em;
     min-height: 5em;
     border-radius: 50%;
-    border: solid rgb(234,0,217) 0.3em;
+    border: solid rgb(246, 65, 122) 0.2em;
 }
 
 /* --------ejercicio 4 tarjeta que gira */
@@ -110,15 +106,15 @@ html,body{
     height: 100%;
     display: grid;
     place-items: center;
-    perspective: 800px;
+    perspective: 1000px;
 }
 #gira{
     width: 35em;
 
     aspect-ratio: 5/7;
-    transition: transform 0.6s;
+    /* queda más suave con 1 segundo */
+    transition: transform 1.0s;
     transform-style: preserve-3d;
-    border: solid;
 
 }
 #gira:hover{
@@ -129,76 +125,111 @@ html,body{
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+    background-color: rgba(209,247,255,0.8);
+    box-shadow:  0 0 5px rgb(2, 147, 157),
+    0 0 10px rgb(10, 108, 114),
+    0 0 20px rgb(37, 110, 116),
+    0 0 40px rgb(53, 95, 98),
+    0 0 80px rgb(60, 90, 92);
+    animation: tarjeta 7s;
 
 }
-#trasera{
+/* animacion porque me apetecía */
+@keyframes tarjeta {
+    from {
+    background-color: rgb(209,247,255);
+    box-shadow:  0 0 5px rgb(5,217,232),
+    0 0 10px rgb(16, 219, 233),
+    0 0 20px rgb(54, 219, 230),
+    0 0 40px rgb(122, 213, 219),
+    0 0 80px rgb(120, 162, 165);}
+    to{
+     background-color: rgba(209,247,255,0.8);
+    box-shadow:  0 0 5px rgb(2, 147, 157),
+    0 0 10px rgb(10, 108, 114),
+    0 0 20px rgb(37, 110, 116),
+    0 0 40px rgb(53, 95, 98),
+    0 0 80px rgb(60, 90, 92);
+    }
+    
+}
 
+#trasera{
+    border-radius: 1em 20em 1em 5em;
     transform: rotateY(180deg);
+}
+#frontal{
+    border-radius: 20em 1em 5em;
 }
 
 @media (max-width: 410px) {
-    #gira{
-        width: 90%;
+    #Ppal{
+        font-size: 0.5em;
     }
+    
+}
+@media (max-width: 310px) {
+    #Ppal{
+        font-size: 0.3em;
+    }
+    
 }
 
 /* --------ejercicio 1 tarjeta */
-#tarjeta{
-    
+.cara article{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    border-radius: 7vw;
-    background-color: lightblue;
-    box-shadow: 1px 3px 5px rgb(77, 108, 99),2px 6px 5px rgb(17, 159, 123);
-    animation: tarjeta 2s reverse;
-}
-#tarjeta:hover{
-    animation: tarjeta 2s;
-    /* animation-timing-function: ease-in-out; */
-    /* animation-direction: alternate; */
-}
-
-@keyframes tarjeta {
-    from {
-    background-color: lightblue;
-    box-shadow: 1px 3px 5px rgb(77, 108, 99),2px 6px 5px rgb(17, 159, 123);
-    }
-    to{
-    background-color: lightcyan;
-    box-shadow: 4px 5px 5px rgb(77, 108, 99),8px 10px 5px rgb(17, 159, 123);
-    }
+    padding: 3em;
     
 }
+
 #encabezado{
-    font-size: 5vw;
+    font-size: 3.5em;
     text-align: center;
     width: 90%;
 }
 #descripcion{
-    justify-content: center;
-    font-size: 3vw;
+    text-align: justify;
+    font-size: 1.9em;
 
 }
 #imagen{
-    max-width: 40%;
-    border-radius: 50%;
-    border-color: aqua;
-    border-width: 5px;
-    
+    max-width: 35%;
+    border-radius: 4em 1em 3em ;
     height: auto;
 }
-#lista{
+.lista{
     width: 90%;
     padding: 0px;
+    display: flex;
+    list-style-type: none;
+}
+#redes{
     margin-top: 5%;
     margin-bottom: 2%;
-    list-style-type: none;
-    text-decoration: wavy;
-    list-style-position: inside;
-    display: flex;
     justify-content: center;
+    
+}
+#redes li{
+    padding-inline: 2em;
+}
+#referencias{
+    
+    flex-direction: column;
+    font-size: 2em;
+}
+.referencia{
+    text-align: justify;
+    justify-items: center;
+}
+.quote{
+    font-size: 1em;
+}
+.person{
+    font-size: 0.7em;
 }
 
