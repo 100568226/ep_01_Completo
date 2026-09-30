@@ -55,11 +55,11 @@ body{
     display: flex;
     justify-content: center;
     background-color: rgb(1,1,43);
-    box-shadow: 0 0 10px rgb(255,42,109),
+    box-shadow: 0 0 3px rgb(255,42,109),
+    0 0 5px rgb(255,42,109),
     0 0 10px rgb(255,42,109),
     0 0 20px rgb(255,42,109),
-    0 0 40px rgb(255,42,109),
-    0 0 80px rgb(255,42,109);
+    0 0 30px rgb(255,42,109);
     /* box-shadow: 0 10px 3px 3px rgb(0,255,159),
     ; */
 }
@@ -156,13 +156,13 @@ body{
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
-    background-color: rgba(209,247,255,0.8);
+    background-color: rgba(209,247,255,0.6);
     box-shadow:  0 0 5px rgb(2, 147, 157),
     0 0 10px rgb(10, 108, 114),
     0 0 20px rgb(37, 110, 116),
     0 0 40px rgb(53, 95, 98),
     0 0 80px rgb(60, 90, 92);
-    animation: tarjeta 7s;
+    animation: tarjeta 5s;
 
 }
 /* animacion porque me apetecía */
@@ -175,7 +175,7 @@ body{
     0 0 40px rgb(122, 213, 219),
     0 0 80px rgb(120, 162, 165);}
     to{
-     background-color: rgba(209,247,255,0.8);
+     background-color: rgba(209,247,255,0.6);
     box-shadow:  0 0 5px rgb(2, 147, 157),
     0 0 10px rgb(10, 108, 114),
     0 0 20px rgb(37, 110, 116),
@@ -202,15 +202,19 @@ body{
     justify-content: space-around;
     align-items: center;
     padding: 3em;
+
     
 }
 
 #encabezado{
+    font-weight: bold;
+    font-variant: small-caps;
     font-size: 3.5em;
     text-align: center;
     width: 90%;
 }
 #descripcion{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
     font-size: 1.9em;
 
@@ -227,10 +231,12 @@ body{
     list-style-type: none;
 }
 #redes{
+    font-size: 1.2em;
+    font-weight: bold;
     margin-top: 5%;
     margin-bottom: 2%;
     justify-content: center;
-    
+    text-shadow: 0 0.1em 3px rgb(30, 77, 94);
 }
 #redes li{
     padding-inline: 2em;
@@ -245,6 +251,7 @@ body{
     justify-items: center;
 }
 .quote{
+    font-style: oblique;
     font-size: 1em;
 }
 .person{
@@ -274,23 +281,116 @@ body{
     }
  }
 .elemento{
-    position: sticky;
+    
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: rgba(200, 200, 200, 0.5);
+    justify-content: space-between;
+    border-radius: 1em 0.2em;
+    background-color:rgba(200, 236, 243, 0.7);
 }
 .elemento figcaption{
     text-align: center;
+    font-weight: bold;
+    color: rgb(25, 30, 31);
+    text-shadow: 0 0.05em 5px rgb(49, 100, 100);
     padding: 0.2em;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 .elemento img{
     width: 100%;
     min-width: 17em;
-    border-radius: 0.5em;
+    border-radius:1em 0.2em;
     padding: 0.2em;    
     
     object-fit: cover;
 
 }
+
+/* --------ejercicio 5 registro */
+
+/* #registro{
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+form {
+    font-size: 1.2em;
+    color: white;
+    width: 35em;
+    padding: 2em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../media/fondoAbstract.jpg);
+    border-radius: 3em 0.5em;
+    box-shadow: 0 0 15px rgba(94, 208, 246, 0.753);
+}
+
+#registro h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#registro label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#registro input {
+    width: 100%;
+    padding: 2em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Cuando el campo recibe el foco */
+#registro input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.826);
+}
+
+/* Campo válido */
+#registro input:valid {
+    border-color: #2ecc71;
+}
+
+/* Campo inválido */
+#registro input:invalid {
+    border-color: #e74c3c;
+}
+
+/* El foco tiene prioridad visual */
+#registro input:focus:invalid {
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.4);
+}
+
+#registro input:focus:valid {
+    border-color: #2ecc71;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.4);
+}
+
+#registro button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#registro button:hover {
+    background-color: #2980b9;
+}
+
