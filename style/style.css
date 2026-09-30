@@ -9,14 +9,29 @@ html,body{
     width: 100%;
     overflow:auto;
 }
-#container{
+.container{
     width: 100%;
     height: 88%;
     background-image: url(../media/callejuela.jpg);
     background-repeat: no-repeat;
     background-size:cover;
+    display: grid;
+    place-items: center;
     
 
+}
+
+@media (max-width: 410px) {
+    .container{
+        font-size: 0.8em;
+    }
+    
+}
+@media (max-width: 320px) {
+    .container{
+        font-size: 0.6em;
+    }
+    
 }
 
 /* --------ejercicio 2 barra de navegación */
@@ -162,19 +177,6 @@ html,body{
     border-radius: 20em 1em 5em;
 }
 
-@media (max-width: 410px) {
-    #Ppal{
-        font-size: 0.5em;
-    }
-    
-}
-@media (max-width: 310px) {
-    #Ppal{
-        font-size: 0.3em;
-    }
-    
-}
-
 /* --------ejercicio 1 tarjeta */
 .cara article{
     width: 100%;
@@ -237,19 +239,23 @@ html,body{
 /* --------ejercicio 3 galería */
 
 #galeria{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(calc(100%/4),1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10em,1fr));
     
     gap: 1em;
 
 }
 .grande{
-    grid-row: span 2;
+    grid-column: span 2;
 }
 .elemento{
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* justify-items: center; */
+    /* align-items: start; */
     
     /* max-width: calc(100%/3); */
     border-style: solid;
