@@ -265,7 +265,7 @@ body{
     width: 98%;
     height: 98%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17em,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em,1fr));
     
     gap: 0.5em;
 
@@ -299,7 +299,7 @@ body{
 }
 .elemento img{
     width: 100%;
-    min-width: 17em;
+    min-width: 20em;
     border-radius:1em 0.2em;
     padding: 0.2em;    
     
