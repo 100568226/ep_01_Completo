@@ -215,8 +215,9 @@ body{
 }
 #descripcion{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: justify;
+    text-align: center;
     font-size: 1.9em;
+    font-weight: 500;
 
 }
 #imagen{
@@ -352,6 +353,12 @@ body{
     padding-block: 0.5em;
 }
 
+@media (max-width: 330px) {
+    .campo{
+        flex-direction: column;
+    }
+}
+
 #registro label {
     margin: 0.3em;
     font-size: 1.4em;
@@ -400,7 +407,7 @@ body{
 }
 
 #registro button {
-    width: 50%;
+    width: fit-content;
     margin-top: 1em;
     padding: 0.5em;
     border: none;
