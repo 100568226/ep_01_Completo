@@ -28,18 +28,18 @@ body{
 
 @media (max-width: 550px) {
     .container{
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 }
 @media (max-width: 410px) {
     .container{
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
     
 }
 @media (max-width: 320px) {
     .container{
-        font-size: 0.6em;
+        font-size: 0.5em;
     }
     
 }
@@ -309,18 +309,14 @@ body{
 
 /* --------ejercicio 5 registro */
 
-/* #registro{
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+#registro {
+    width: 40em;
+    aspect-ratio: 7/5;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-} */
-form {
+    flex-direction: column;
+    justify-items: space-around;
     font-size: 1.2em;
-    color: white;
-    width: 35em;
+    color: rgb(180, 236, 250);
     padding: 2em;
     background-size: cover;
     background-repeat: no-repeat;
@@ -330,67 +326,97 @@ form {
     box-shadow: 0 0 15px rgba(94, 208, 246, 0.753);
 }
 
+@media (max-width: 770px) {
+    #registro{
+        width: 30em;
+    }
+}
+@media (max-width: 340px) {
+    #registro{
+        width: 95%;
+    }
+}
 #registro h1 {
     text-align: center;
-    margin-bottom: 20px;
+    text-shadow: 0 0.05em 5px rgb(15, 94, 120);
+    margin-bottom: 0.5em;
+    font-variant: small-caps;
+
+}
+
+.campo{
+    padding-block: 0.2em;
 }
 
 #registro label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    font-weight:700;
+    text-shadow: 0 0.05em 5px rgb(12, 69, 88);
+
 }
 
 #registro input {
+    font-size: 0.8em;
     width: 100%;
-    padding: 2em;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+    padding: 1.5em;
+    border-radius: 1em 0.5em;
+    border: 0;
+    outline: 2px solid rgba(130, 235, 249, 0.5);
     transition: 0.3s;
+    margin-top: 1em;
 }
 
-/* Cuando el campo recibe el foco */
 #registro input:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.826);
+    border: 1px;
+    border-color:rgb(86, 227, 194);
+    box-shadow: 2px 3px 3px 4px rgba(0, 0, 0,0.5);
 }
 
-/* Campo válido */
+
 #registro input:valid {
     border-color: #2ecc71;
+    border-radius: 2em 0.5em; 
 }
 
-/* Campo inválido */
-#registro input:invalid {
+
+/* #registro input:invalid {
     border-color: #e74c3c;
 }
 
-/* El foco tiene prioridad visual */
+
 #registro input:focus:invalid {
     border-color: #e74c3c;
     box-shadow: 0 0 5px rgba(231, 76, 60, 0.4);
-}
+} */
 
 #registro input:focus:valid {
     border-color: #2ecc71;
-    box-shadow: 0 0 5px rgba(46, 204, 113, 0.4);
+    /* box-shadow: 2px 3px 3px 4px rgba(0, 0, 0,0.5); */
 }
 
 #registro button {
-    width: 100%;
-    margin-top: 25px;
-    padding: 12px;
+    width: 50%;
+    margin-top: 1em;
+    padding: 0.5em;
     border: none;
     border-radius: 5px;
-    background-color: #3498db;
-    color: white;
+    background-color: rgb(15, 94, 120);
+    color: rgb(254, 253, 253);
     font-size: 1.1em;
+    align-self: center;
     cursor: pointer;
 }
 
 #registro button:hover {
-    background-color: #2980b9;
+    background-color: rgb(33, 185, 236);
 }
 
+#registro button:active {
+    cursor:wait;
+}
+
+#registro input::-ms-reveal{
+
+}
